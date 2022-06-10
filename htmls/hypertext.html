@@ -5,37 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../CSS/styleParent.css">
     <link rel="stylesheet" href="../CSS/styleWritings.css">
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@300&family=Press+Start+2P&family=Roboto:ital,wght@1,100&family=Sora:wght@500&family=VT323&display=swap" rel="stylesheet">     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../CSS/styleConsole.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@300&family=Press+Start+2P&family=Roboto:ital,wght@0,400;1,100&family=Sora:wght@500&family=VT323&display=swap" rel="stylesheet"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/4eebd97972.js" crossorigin="anonymous"></script>
 
-    <script src="../js/javaScriptHyper.js"></script>
+    <script src="../js/javaScrip.js"></script>
 </head>
 
 <body>
     <header>
   
         <nav>
-            <h1> <div id="output"></div></h1>
+            <h1> <div id="output">Hypertext</div></h1>
 
             <input type="checkbox" id ="check">
             <label for="check" class="burgerButton"> <i class="fa-solid fa-bars"></i></label>
             <ul>
                 <li>
+                    <button class="navBtn u-link navBtnConsole" onclick="displayConsole()" >Console</button>
                     <a href="../index.html" class="navBtn">Home</a>
                     <a href="projects.html" class="navBtn">Portfolio</a>
-                    <a href="blog.html" class="navBtn">Blog</a>
+                    <div class="dropdown">
+                        <a href="blog.html" class="navBtn dropbtn">Blog</a>
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="bots.html">Bots</a>
+                          <a href="browser.html">Browser</a>
+                          <a href="hypertext.html">Hypertext</a>
+                          <a href="justiceDesign.html">Justice in Design</a>
+                          <a href="uiux.html"> Analysis on UI UX</a>
+                          <a href="reflection.html">Reflection</a>
+                        </div>
                     <a href="designJurnal.html"class="navBtn">Design</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <article>
-            <h2>A reflection of “What Hypertext Is” written by Noah Warden-Fruin.
+        <article class="h-entry">
+            <h2 class="p-name" >A reflection of “What Hypertext Is” written by Noah Warden-Fruin.
                 Tumi Jourdan
                 2180153</h2>
-            <p> 
+            <p class="e-content"> 
                 The aim of the document is to answer the question “What is hypertext” in its own method.
                 <br>
                 <br>
@@ -86,5 +105,36 @@
     We went <span data-spell="about" data-original="asdfa"></span> our <span data-spell="business" data-original="1!!#$@"></span>.
     </div>
 <div id="output"></div>-->
+
+<!--console-->
+
+
+ <!-- Draggable DIV -->
+ <div id="mydiv" style="display: none;">
+    <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+    <span onclick="this.parentElement.style.display='none'"class="w3-button w3-black w3-hover-red w3-large w3-display-topright">x</span>
+    <div id="mydivheader">Click here to move</div>
+
+
+    <!--console content-->
+    <div id="displayField">
+        <p id="consolContent">Type "help" for more commands</p>
+    </div>
+
+    <!--inputbox-->
+
+    <button id="button">Button</button>
+    
+    <form id="inputField">
+  
+        <input id = "myInput" type="text" name="fname" id="fname">
+        
+    </form>
+</div>  
+<!--console end-->
+
+
+<script src="../js/terminal2.js"></script>
+<script src="../js/movePanel.js"></script>
 </body>
 </html> 

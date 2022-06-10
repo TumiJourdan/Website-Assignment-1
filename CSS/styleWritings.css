@@ -1,34 +1,5 @@
-
-
 body, html{
-    margin: 0;
-    padding: 0;
-    background-color: aliceblue;
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100%; 
-    width: 100%;
-}
-
-header{
-    width: 100%;
-    height: 70px;
-    background-color: #282828f3;
-}
-
-.burgerButton{
-  font-size: 30px;
-  color: white;
-  float: right;
-  margin-right: 40px;
-  line-height: 80px;
-  cursor: pointer;
-  display: none;
-}
-#check{
-  display: none;
+  background-image: none;  
 }
 
 article{
@@ -36,40 +7,7 @@ article{
   animation-name: fadeIn, slideIn;
   animation-duration: 2s, 1s;
 }
-h1{
-    position:absolute;
-    padding: 3px;
-    float: left;
-    margin-left: 2%;
-    margin-top: 10px;
-    font-family: 'Press Start 2P', cursive;    color: #00c5e3;
 
-}
-span{
-    color: #ffffff;
-
-}
-
-ul {
-    width: auto;
-    float: right;
-    margin-top: 8px;
-}
-
-li{
-    display: inline-block;
-    padding:15px 30px;
-    
-}
-.navBtn{
-    text-align: center;
-    color: #ffffff;
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 100%;
-    margin-right: 30px;
-
-}
 
 img{
   height: 100%;
@@ -84,110 +22,50 @@ img{
 .imageHolder{
   align-items: center;
 }
-.navBtn:hover{
-    color: #00c5e3;
-    transition: 0.5s;
-}
-/*cards https://www.youtube.com/watch?v=jAJxKnGHcDk*/
-.container{
-  padding: 2rem 5%;
 
-}
-
-.flex{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-
-}
-
-.card{
-  background: #282828a3;
-  padding: 15px 20px;
-  box-shadow: 0 0 3px rgba(0,0, 0, 0.5);
-  flex: 1 0 15em;
-
-  animation-name: fadeIn, slideIn;
-  animation-duration: 2s, 1s;
-
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-@keyframes slideIn{
-  0%{
-    transform: translateY(500px);
-  }
-  100%{
-
-  }
-}
-
-.card h2{
-  margin-bottom: 15px;
-  text-transform: capitalize;
-  color: rgb(245, 245, 245);
-  font-size: 2.4rem;
-}
-
-.card p{
-  text-align: left;
-  line-height: 130%;
-  margin-bottom: 20px;
-  color: #ffffff;
-}
-.btn {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  color: black;
-  background-color: #00c5e3;
+.navBlog {
+  background-color : #31B0D5;
+  color: white;
   padding: 10px 20px;
-  letter-spacing: 1px;
-  transition: 0.5s ease-in-out;
-  border-radius: 5px;
-  border: 1px solid #00c5e3;
-  margin: 10px 0 ;
+  border-radius: 4px;
+  border-color: #46b8da;
+
 
 
 }
-.btn:hover{
-  background: white;
+
+#navBlogContainer {
+  position: sticky;
+  bottom: 0;
+  
+  float: right;
+  background-color: #31B0D5;
+  padding-bottom: 12px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+}
+
+.dropdown-content a {
   color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-@media (max-width: 800px){
-  .burgerButton{
-    display: block;
-  }
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
 
-  nav ul{
-    position: fixed;
-    width: 100%;
-    background-color: rgba(0,0, 0, 0.5);
-    height: 100vh;
-    text-align: center;
-    top: 60px;
-    right: -120%;
-    transition: all 1s;
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
 
-  }
-  nav ul li{
-    display: block;
-    pad: 30px 0;
-  }
+/* Change the background color of the dropdown button when the dropdown content is shown */
 
-  nav ul li a{
-    font-size: 25px;
-    columns: white;
-    text-transform: uppercase;
-  }
 
-  #check:checked ~ ul{
-    right: 0%;
-  }
-
-}
 

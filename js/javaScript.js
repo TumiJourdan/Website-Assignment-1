@@ -1,10 +1,15 @@
 $(document).ready(function(){
     var theLetters = "01"; //You can customize what letters it will cycle through
-    var ctnt = "Tumi Jourdan GD Student"; // Your text goes here
+
+    /* talk to andre to fix */
+   // var ctnt = "Tumi Jourdan GD Student"; // Your text goes here
+    var ctnt = document.getElementById("output").innerHTML;
+
+    console.log(ctnt);
     var speed = 25; // ms per frame
     var increment = 2; // frames per step. Must be >2
-    
-        
+   
+        //change the variable names
     var clen = ctnt.length;       
     var si = 0;
     var stri = 0;
